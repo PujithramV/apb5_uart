@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/sdlab/apb5_uart/tb/apb5_uart_if.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_sva.sv
+/home/sdlab/apb5_uart/tb/tb_top.sv
+/home/sdlab/apb5_uart/rtl/uart_tx.sv
+/home/sdlab/apb5_uart/rtl/uart_rx.sv
+/home/sdlab/apb5_uart/rtl/apb5_uart_bridge.sv

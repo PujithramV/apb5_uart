@@ -1,0 +1,14 @@
+../tb/apb5_uart_trans.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_trans.sv
+../tb/apb5_uart_gen.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_gen.sv
+../tb/apb5_uart_drv.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_drv.sv
+../tb/apb5_uart_mon.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_mon.sv
+../tb/apb5_uart_scb.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_scb.sv
+../tb/apb5_uart_cov.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_cov.sv
+../tb/apb5_uart_env.sv
+/home/sdlab/apb5_uart/tb/apb5_uart_env.sv

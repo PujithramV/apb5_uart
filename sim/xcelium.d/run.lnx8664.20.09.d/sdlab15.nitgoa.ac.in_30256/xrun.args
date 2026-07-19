@@ -1,0 +1,11 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+../tb/apb5_uart_if.sv
+../tb/tb_top.sv
+../rtl/uart_tx.sv
+../rtl/uart_rx.sv
+../rtl/apb5_uart_bridge.sv
+-sv
++access+rwc

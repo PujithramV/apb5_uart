@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++access+rwc
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1784130904
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	20.09-s012"
+-XLNAME
+./xcelium.d/run.lnx8664.20.09.d/sdlab15.nitgoa.ac.in_30256

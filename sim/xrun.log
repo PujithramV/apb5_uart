@@ -1,0 +1,427 @@
+xrun(64): 20.09-s012: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s012: Started on Jul 15, 2026 at 22:25:48 IST
+xrun
+	../tb/apb5_uart_if.sv
+	../tb/apb5_uart_sva.sv
+	../tb/tb_top.sv
+	../rtl/uart_tx.sv
+	../rtl/uart_rx.sv
+	../rtl/apb5_uart_bridge.sv
+	-sv
+	+access+rwc
+	-coverage all
+file: ../tb/tb_top.sv
+	module worklib.tb_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x7e38784d
+		tb_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.uart_tx
+			FSM extracted for state register state
+		worklib.uart_rx
+			FSM extracted for state register state
+		worklib.apb5_uart_bridge
+			FSM extracted for state register current_state
+		worklib.apb5_uart_sva
+		worklib.tb_top
+	Total FSMs extracted = 3
+	Building instance overlay tables: .....
+            if (!trans.randomize()) $fatal("Generator: Randomization failed!");
+                                                                            |
+xmelab: *W,STRINT (../tb/apb5_uart_gen.sv,23|76): String literal argument supplied to integer parameter.
+......
+xmelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+......... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.apb5_uart_sva:sv <0x3cfa835a>
+			streams:  10, words:  8261
+		worklib.uart_rx:sv <0x6efb563e>
+			streams:  14, words: 10019
+		worklib.uart_tx:sv <0x23fe4e30>
+			streams:  13, words:  8969
+		worklib.apb5_uart_bridge:sv <0x773dc451>
+			streams:  26, words: 15975
+		worklib.tb_top:sv <0x0f026ed2>
+			streams:  20, words:  9075
+		worklib.\$unit_0x7e38784d :compilation_unit <0x3bf1e569>
+			streams:  17, words: 20299
+		worklib.\$unit_0x7e38784d :compilation_unit <0x65582420>
+			streams:   8, words:  6196
+		worklib.\$unit_0x7e38784d :compilation_unit <0x38108962>
+			streams:   9, words: 15192
+		worklib.\$unit_0x7e38784d :compilation_unit <0x0a14aeec>
+			streams:   8, words:  7386
+		worklib.\$unit_0x7e38784d :compilation_unit <0x606c7bff>
+			streams:   7, words:  2616
+		worklib.\$unit_0x7e38784d :compilation_unit <0x4d8250c4>
+			streams:  11, words:  7114
+		worklib.\$unit_0x7e38784d :compilation_unit <0x5d0c9314>
+			streams:   8, words:  5454
+		worklib.apb5_uart_if:sv <0x6064d6fd>
+			streams:  41, words: 28164
+		worklib.\$unit_0x7e38784d :compilation_unit <0x3edb8da6>
+			streams:   0, words:     0
+xmelab: *W,COVNOEN: By default, toggle coverage is not supported for systemverilog enumerated nets and variables. To enable toggle coverage of these objects, specify the 'set_toggle_scoring -sv_enum' command in the coverage configuration file.
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     5       5
+		Interfaces:                  1       1
+		Registers:                 115     140
+		Scalar wires:               28       -
+		Vectored wires:             12       -
+		Named events:                3       5
+		Always blocks:              26      26
+		Initial blocks:              6       6
+		Clocking blocks:             2       2
+		Clocking items:             28      28
+		Parallel blocks:             1       1
+		Cont. assignments:           2       2
+		Pseudo assignments:         26      26
+		Assertions:                  2       2
+		Covergroup Instances:        0       1
+		Compilation units:           1       1
+		SV Class declarations:       7       7
+		SV Class specializations:    7       7
+	Writing initial simulation snapshot: worklib.tb_top:sv
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,RNDXCELON: A newer version of the SystemVerilog constraint solver is being used which has better support for array-solving, new solve-order mechanism, and seed stability enhancements..
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /cad/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+[DRIVER] Reset dropped. Ready to drive.
+[MONITOR] Time=65 | Addr=0x8 | Wr=1 | Data=0x557d53fd | Strobe=0x3 | Wake=1 | Rdata=0x0 | Err=0
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=75 | Addr=0x8 | Wr=1 | Data=0x557d53fd | Strobe=0x3 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=75 | Addr=0x8 | Wr=1 | Data=0x557d53fd | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=105 | Addr=0x4 | Wr=0 | Data=0x557d53fd | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=105 | Addr=0x4 | Wr=0 | Data=0x84950ceb | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=135 | Addr=0x8 | Wr=0 | Data=0x557d53fd | Strobe=0x0 | Wake=1 | Rdata=0x53fd | Err=0
+[DRIVER] Time=135 | Addr=0x8 | Wr=0 | Data=0x94a3edd | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=165 | Addr=0x0 | Wr=1 | Data=0xef8e58fb | Strobe=0x0 | Wake=0 | Rdata=0x53fd | Err=0
+[DRIVER] Time=165 | Addr=0x0 | Wr=1 | Data=0xef8e58fb | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=195 | Addr=0x8 | Wr=1 | Data=0x77772507 | Strobe=0xf | Wake=1 | Rdata=0x53fd | Err=0
+[DRIVER] Time=195 | Addr=0x8 | Wr=1 | Data=0x77772507 | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=225 | Addr=0x0 | Wr=0 | Data=0x77772507 | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=225 | Addr=0x0 | Wr=0 | Data=0xa31962f1 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=255 | Addr=0x8 | Wr=1 | Data=0xde01811c | Strobe=0x3 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=255 | Addr=0x8 | Wr=1 | Data=0xde01811c | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=285 | Addr=0x0 | Wr=1 | Data=0xb31edd3f | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=285 | Addr=0x0 | Wr=1 | Data=0xb31edd3f | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=315 | Addr=0x8 | Wr=1 | Data=0xdfc7ee4e | Strobe=0xf | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=315 | Addr=0x8 | Wr=1 | Data=0xdfc7ee4e | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=345 | Addr=0x8 | Wr=1 | Data=0xbf9680a1 | Strobe=0x7 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=345 | Addr=0x8 | Wr=1 | Data=0xbf9680a1 | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=375 | Addr=0x8 | Wr=0 | Data=0xbf9680a1 | Strobe=0x0 | Wake=1 | Rdata=0xdf9680a1 | Err=0
+[DRIVER] Time=375 | Addr=0x8 | Wr=0 | Data=0x58e86727 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=405 | Addr=0x8 | Wr=0 | Data=0xbf9680a1 | Strobe=0x0 | Wake=1 | Rdata=0xdf9680a1 | Err=0
+[DRIVER] Time=405 | Addr=0x8 | Wr=0 | Data=0x6739cec6 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=435 | Addr=0x4 | Wr=0 | Data=0xbf9680a1 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=435 | Addr=0x4 | Wr=0 | Data=0xadb92391 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=465 | Addr=0x8 | Wr=1 | Data=0xb9b2b184 | Strobe=0xf | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=465 | Addr=0x8 | Wr=1 | Data=0xb9b2b184 | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=495 | Addr=0x0 | Wr=1 | Data=0x1c4af731 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=495 | Addr=0x0 | Wr=1 | Data=0x1c4af731 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=525 | Addr=0x4 | Wr=0 | Data=0x1c4af731 | Strobe=0x0 | Wake=0 | Rdata=0x1 | Err=0
+[DRIVER] Time=525 | Addr=0x4 | Wr=0 | Data=0xeea0e05b | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=555 | Addr=0x8 | Wr=1 | Data=0xf38e3b1c | Strobe=0x7 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=555 | Addr=0x8 | Wr=1 | Data=0xf38e3b1c | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=585 | Addr=0x4 | Wr=1 | Data=0x9cd31927 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=1
+[DRIVER] Time=585 | Addr=0x4 | Wr=1 | Data=0x9cd31927 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=615 | Addr=0x0 | Wr=0 | Data=0x9cd31927 | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=615 | Addr=0x0 | Wr=0 | Data=0xf414cead | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=645 | Addr=0x8 | Wr=1 | Data=0xaafed8f8 | Strobe=0x1 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=645 | Addr=0x8 | Wr=1 | Data=0xaafed8f8 | Strobe=0x1 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=675 | Addr=0x8 | Wr=1 | Data=0x1c3fe2d | Strobe=0x3 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=675 | Addr=0x8 | Wr=1 | Data=0x1c3fe2d | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=705 | Addr=0x0 | Wr=1 | Data=0x990c5536 | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=705 | Addr=0x0 | Wr=1 | Data=0x990c5536 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=735 | Addr=0x0 | Wr=1 | Data=0xb4c1a26b | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=735 | Addr=0x0 | Wr=1 | Data=0xb4c1a26b | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=765 | Addr=0x8 | Wr=0 | Data=0xb4c1a26b | Strobe=0x0 | Wake=1 | Rdata=0xb98efe2d | Err=0
+[DRIVER] Time=765 | Addr=0x8 | Wr=0 | Data=0xf3101554 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=795 | Addr=0x0 | Wr=0 | Data=0xb4c1a26b | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=795 | Addr=0x0 | Wr=0 | Data=0xa791b712 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=825 | Addr=0x0 | Wr=0 | Data=0xb4c1a26b | Strobe=0x0 | Wake=0 | Rdata=0x0 | Err=0
+[DRIVER] Time=825 | Addr=0x0 | Wr=0 | Data=0xe1e432da | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=855 | Addr=0x8 | Wr=1 | Data=0xf5aecb33 | Strobe=0x7 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=855 | Addr=0x8 | Wr=1 | Data=0xf5aecb33 | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=885 | Addr=0x8 | Wr=0 | Data=0xf5aecb33 | Strobe=0x0 | Wake=0 | Rdata=0xb9aecb33 | Err=0
+[DRIVER] Time=885 | Addr=0x8 | Wr=0 | Data=0xdba1bcbe | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=915 | Addr=0x8 | Wr=1 | Data=0x4e9b8b0c | Strobe=0x1 | Wake=1 | Rdata=0xb9aecb33 | Err=0
+[DRIVER] Time=915 | Addr=0x8 | Wr=1 | Data=0x4e9b8b0c | Strobe=0x1 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=945 | Addr=0x4 | Wr=0 | Data=0x4e9b8b0c | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=945 | Addr=0x4 | Wr=0 | Data=0x43155542 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=975 | Addr=0x4 | Wr=1 | Data=0x77606b82 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=1
+[DRIVER] Time=975 | Addr=0x4 | Wr=1 | Data=0x77606b82 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=1005 | Addr=0x8 | Wr=1 | Data=0xf36f6001 | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1005 | Addr=0x8 | Wr=1 | Data=0xf36f6001 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1035 | Addr=0x8 | Wr=0 | Data=0xf36f6001 | Strobe=0x0 | Wake=1 | Rdata=0xb9ae6001 | Err=0
+[DRIVER] Time=1035 | Addr=0x8 | Wr=0 | Data=0xbdeedcc9 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1065 | Addr=0x0 | Wr=1 | Data=0x65f43f2c | Strobe=0x0 | Wake=1 | Rdata=0xb9ae6001 | Err=0
+[DRIVER] Time=1065 | Addr=0x0 | Wr=1 | Data=0x65f43f2c | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1095 | Addr=0x8 | Wr=1 | Data=0x4ec280a1 | Strobe=0xf | Wake=1 | Rdata=0xb9ae6001 | Err=0
+[DRIVER] Time=1095 | Addr=0x8 | Wr=1 | Data=0x4ec280a1 | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1125 | Addr=0x8 | Wr=1 | Data=0xf7fa94df | Strobe=0x7 | Wake=1 | Rdata=0xb9ae6001 | Err=0
+[DRIVER] Time=1125 | Addr=0x8 | Wr=1 | Data=0xf7fa94df | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1155 | Addr=0x8 | Wr=0 | Data=0xf7fa94df | Strobe=0x0 | Wake=1 | Rdata=0x4efa94df | Err=0
+[DRIVER] Time=1155 | Addr=0x8 | Wr=0 | Data=0xc5b262cc | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1185 | Addr=0x8 | Wr=1 | Data=0xcba9f42a | Strobe=0xf | Wake=1 | Rdata=0x4efa94df | Err=0
+[DRIVER] Time=1185 | Addr=0x8 | Wr=1 | Data=0xcba9f42a | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1215 | Addr=0x4 | Wr=1 | Data=0x95304816 | Strobe=0x0 | Wake=1 | Rdata=0x4efa94df | Err=1
+[DRIVER] Time=1215 | Addr=0x4 | Wr=1 | Data=0x95304816 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=1245 | Addr=0x4 | Wr=1 | Data=0xe944228c | Strobe=0x0 | Wake=1 | Rdata=0x4efa94df | Err=1
+[DRIVER] Time=1245 | Addr=0x4 | Wr=1 | Data=0xe944228c | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=1275 | Addr=0x0 | Wr=1 | Data=0xf8561a2c | Strobe=0x0 | Wake=1 | Rdata=0x4efa94df | Err=0
+[DRIVER] Time=1275 | Addr=0x0 | Wr=1 | Data=0xf8561a2c | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1305 | Addr=0x8 | Wr=0 | Data=0xf8561a2c | Strobe=0x0 | Wake=1 | Rdata=0xcba9f42a | Err=0
+[DRIVER] Time=1305 | Addr=0x8 | Wr=0 | Data=0x46418f1e | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1335 | Addr=0x8 | Wr=1 | Data=0x2f824dea | Strobe=0x3 | Wake=0 | Rdata=0xcba9f42a | Err=0
+[DRIVER] Time=1335 | Addr=0x8 | Wr=1 | Data=0x2f824dea | Strobe=0x3 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1365 | Addr=0x4 | Wr=0 | Data=0x2f824dea | Strobe=0x0 | Wake=0 | Rdata=0x1 | Err=0
+[DRIVER] Time=1365 | Addr=0x4 | Wr=0 | Data=0xedd1fb5a | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=1395 | Addr=0x4 | Wr=0 | Data=0x2f824dea | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1395 | Addr=0x4 | Wr=0 | Data=0xb0feed91 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=1425 | Addr=0x8 | Wr=1 | Data=0x9d7da4ad | Strobe=0x7 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1425 | Addr=0x8 | Wr=1 | Data=0x9d7da4ad | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1455 | Addr=0x0 | Wr=0 | Data=0x9d7da4ad | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=1455 | Addr=0x0 | Wr=0 | Data=0x5eded3e5 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1485 | Addr=0x8 | Wr=0 | Data=0x9d7da4ad | Strobe=0x0 | Wake=1 | Rdata=0xcb7da4ad | Err=0
+[DRIVER] Time=1485 | Addr=0x8 | Wr=0 | Data=0x87ea2bf2 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1515 | Addr=0x8 | Wr=0 | Data=0x9d7da4ad | Strobe=0x0 | Wake=1 | Rdata=0xcb7da4ad | Err=0
+[DRIVER] Time=1515 | Addr=0x8 | Wr=0 | Data=0x9582700 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1545 | Addr=0x4 | Wr=1 | Data=0xdce76593 | Strobe=0x0 | Wake=1 | Rdata=0xcb7da4ad | Err=1
+[DRIVER] Time=1545 | Addr=0x4 | Wr=1 | Data=0xdce76593 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=1575 | Addr=0x8 | Wr=1 | Data=0x78b43326 | Strobe=0x3 | Wake=1 | Rdata=0xcb7da4ad | Err=0
+[DRIVER] Time=1575 | Addr=0x8 | Wr=1 | Data=0x78b43326 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1605 | Addr=0x4 | Wr=0 | Data=0x78b43326 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1605 | Addr=0x4 | Wr=0 | Data=0xa7be229a | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=1635 | Addr=0x0 | Wr=1 | Data=0xedfa3095 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1635 | Addr=0x0 | Wr=1 | Data=0xedfa3095 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1665 | Addr=0x4 | Wr=1 | Data=0xb43052ae | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=1
+[DRIVER] Time=1665 | Addr=0x4 | Wr=1 | Data=0xb43052ae | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=1695 | Addr=0x0 | Wr=1 | Data=0xf00e8890 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1695 | Addr=0x0 | Wr=1 | Data=0xf00e8890 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1725 | Addr=0x4 | Wr=0 | Data=0xf00e8890 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1725 | Addr=0x4 | Wr=0 | Data=0xa785069 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=1755 | Addr=0x0 | Wr=1 | Data=0x46eb99c7 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1755 | Addr=0x0 | Wr=1 | Data=0x46eb99c7 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1785 | Addr=0x4 | Wr=1 | Data=0x787c91d | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=1
+[DRIVER] Time=1785 | Addr=0x4 | Wr=1 | Data=0x787c91d | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=1815 | Addr=0x8 | Wr=1 | Data=0x38040c81 | Strobe=0x1 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1815 | Addr=0x8 | Wr=1 | Data=0x38040c81 | Strobe=0x1 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1845 | Addr=0x8 | Wr=1 | Data=0xab3105d7 | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1845 | Addr=0x8 | Wr=1 | Data=0xab3105d7 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1875 | Addr=0x8 | Wr=1 | Data=0xf722b18f | Strobe=0x7 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1875 | Addr=0x8 | Wr=1 | Data=0xf722b18f | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=1905 | Addr=0x0 | Wr=1 | Data=0x60010667 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=1905 | Addr=0x0 | Wr=1 | Data=0x60010667 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1935 | Addr=0x4 | Wr=0 | Data=0x60010667 | Strobe=0x0 | Wake=0 | Rdata=0x1 | Err=0
+[DRIVER] Time=1935 | Addr=0x4 | Wr=0 | Data=0x31b325f9 | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=1965 | Addr=0x0 | Wr=1 | Data=0xa1fdbec1 | Strobe=0x0 | Wake=0 | Rdata=0x1 | Err=0
+[DRIVER] Time=1965 | Addr=0x0 | Wr=1 | Data=0xa1fdbec1 | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=1995 | Addr=0x4 | Wr=0 | Data=0xa1fdbec1 | Strobe=0x0 | Wake=0 | Rdata=0x1 | Err=0
+[DRIVER] Time=1995 | Addr=0x4 | Wr=0 | Data=0x89a948d4 | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=2025 | Addr=0x0 | Wr=1 | Data=0xe33de16e | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2025 | Addr=0x0 | Wr=1 | Data=0xe33de16e | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=2055 | Addr=0x0 | Wr=1 | Data=0x599c719 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2055 | Addr=0x0 | Wr=1 | Data=0x599c719 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=2085 | Addr=0x8 | Wr=1 | Data=0x99205409 | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2085 | Addr=0x8 | Wr=1 | Data=0x99205409 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2115 | Addr=0x8 | Wr=1 | Data=0x4e2da985 | Strobe=0xf | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2115 | Addr=0x8 | Wr=1 | Data=0x4e2da985 | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2145 | Addr=0x8 | Wr=1 | Data=0xf6e5760e | Strobe=0xf | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2145 | Addr=0x8 | Wr=1 | Data=0xf6e5760e | Strobe=0xf | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2175 | Addr=0x8 | Wr=1 | Data=0x3d7796e0 | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2175 | Addr=0x8 | Wr=1 | Data=0x3d7796e0 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2205 | Addr=0x8 | Wr=1 | Data=0x3f69e11c | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2205 | Addr=0x8 | Wr=1 | Data=0x3f69e11c | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2235 | Addr=0x4 | Wr=1 | Data=0x3aa5b495 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=1
+[DRIVER] Time=2235 | Addr=0x4 | Wr=1 | Data=0x3aa5b495 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=2265 | Addr=0x4 | Wr=0 | Data=0x3aa5b495 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2265 | Addr=0x4 | Wr=0 | Data=0xe1c5a95c | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=2295 | Addr=0x8 | Wr=0 | Data=0x3aa5b495 | Strobe=0x0 | Wake=1 | Rdata=0xf6e5e11c | Err=0
+[DRIVER] Time=2295 | Addr=0x8 | Wr=0 | Data=0xcc45f510 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2325 | Addr=0x8 | Wr=1 | Data=0xa3af643d | Strobe=0x3 | Wake=1 | Rdata=0xf6e5e11c | Err=0
+[DRIVER] Time=2325 | Addr=0x8 | Wr=1 | Data=0xa3af643d | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2355 | Addr=0x8 | Wr=1 | Data=0x161e5899 | Strobe=0x3 | Wake=1 | Rdata=0xf6e5e11c | Err=0
+[DRIVER] Time=2355 | Addr=0x8 | Wr=1 | Data=0x161e5899 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2385 | Addr=0x0 | Wr=1 | Data=0xf3d7b216 | Strobe=0x0 | Wake=0 | Rdata=0xf6e5e11c | Err=0
+[DRIVER] Time=2385 | Addr=0x0 | Wr=1 | Data=0xf3d7b216 | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=2415 | Addr=0x8 | Wr=0 | Data=0xf3d7b216 | Strobe=0x0 | Wake=1 | Rdata=0xf6e55899 | Err=0
+[DRIVER] Time=2415 | Addr=0x8 | Wr=0 | Data=0xfa57194e | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2445 | Addr=0x8 | Wr=1 | Data=0xb498e185 | Strobe=0x7 | Wake=1 | Rdata=0xf6e55899 | Err=0
+[DRIVER] Time=2445 | Addr=0x8 | Wr=1 | Data=0xb498e185 | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2475 | Addr=0x0 | Wr=1 | Data=0x69e5ca57 | Strobe=0x0 | Wake=1 | Rdata=0xf6e55899 | Err=0
+[DRIVER] Time=2475 | Addr=0x0 | Wr=1 | Data=0x69e5ca57 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=2505 | Addr=0x8 | Wr=1 | Data=0xcaaec719 | Strobe=0x1 | Wake=1 | Rdata=0xf6e55899 | Err=0
+[DRIVER] Time=2505 | Addr=0x8 | Wr=1 | Data=0xcaaec719 | Strobe=0x1 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2535 | Addr=0x8 | Wr=1 | Data=0x796eba9e | Strobe=0x7 | Wake=1 | Rdata=0xf6e55899 | Err=0
+[DRIVER] Time=2535 | Addr=0x8 | Wr=1 | Data=0x796eba9e | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2565 | Addr=0x0 | Wr=0 | Data=0x796eba9e | Strobe=0x0 | Wake=1 | Rdata=0x0 | Err=0
+[DRIVER] Time=2565 | Addr=0x0 | Wr=0 | Data=0x2848c847 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=2595 | Addr=0x4 | Wr=0 | Data=0x796eba9e | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2595 | Addr=0x4 | Wr=0 | Data=0x309df3f9 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=2625 | Addr=0x8 | Wr=1 | Data=0xb676651f | Strobe=0x7 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2625 | Addr=0x8 | Wr=1 | Data=0xb676651f | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2655 | Addr=0x8 | Wr=0 | Data=0xb676651f | Strobe=0x0 | Wake=1 | Rdata=0xf676651f | Err=0
+[DRIVER] Time=2655 | Addr=0x8 | Wr=0 | Data=0xff0147d | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2685 | Addr=0x8 | Wr=1 | Data=0x1902fff6 | Strobe=0x7 | Wake=0 | Rdata=0xf676651f | Err=0
+[DRIVER] Time=2685 | Addr=0x8 | Wr=1 | Data=0x1902fff6 | Strobe=0x7 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2715 | Addr=0x8 | Wr=1 | Data=0xdddfac81 | Strobe=0x3 | Wake=1 | Rdata=0xf676651f | Err=0
+[DRIVER] Time=2715 | Addr=0x8 | Wr=1 | Data=0xdddfac81 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2745 | Addr=0x8 | Wr=0 | Data=0xdddfac81 | Strobe=0x0 | Wake=1 | Rdata=0xf602ac81 | Err=0
+[DRIVER] Time=2745 | Addr=0x8 | Wr=0 | Data=0xc17aaeab | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2775 | Addr=0x8 | Wr=1 | Data=0xddb88804 | Strobe=0x1 | Wake=1 | Rdata=0xf602ac81 | Err=0
+[DRIVER] Time=2775 | Addr=0x8 | Wr=1 | Data=0xddb88804 | Strobe=0x1 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2805 | Addr=0x0 | Wr=1 | Data=0xed3fbf80 | Strobe=0x0 | Wake=1 | Rdata=0xf602ac81 | Err=0
+[DRIVER] Time=2805 | Addr=0x0 | Wr=1 | Data=0xed3fbf80 | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x0
+[MONITOR] Time=2835 | Addr=0x8 | Wr=1 | Data=0x917f49b8 | Strobe=0x7 | Wake=1 | Rdata=0xf602ac81 | Err=0
+[DRIVER] Time=2835 | Addr=0x8 | Wr=1 | Data=0x917f49b8 | Strobe=0x7 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2865 | Addr=0x4 | Wr=0 | Data=0x917f49b8 | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2865 | Addr=0x4 | Wr=0 | Data=0xfa7667ec | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=2895 | Addr=0x4 | Wr=1 | Data=0xbe6f3fec | Strobe=0x0 | Wake=0 | Rdata=0x1 | Err=1
+[DRIVER] Time=2895 | Addr=0x4 | Wr=1 | Data=0xbe6f3fec | Strobe=0x0 | Wake=0 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+[MONITOR] Time=2925 | Addr=0x4 | Wr=0 | Data=0xbe6f3fec | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2925 | Addr=0x4 | Wr=0 | Data=0xc2b5c37a | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x4
+[MONITOR] Time=2955 | Addr=0x8 | Wr=1 | Data=0x9e25d763 | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2955 | Addr=0x8 | Wr=1 | Data=0x9e25d763 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=2985 | Addr=0x8 | Wr=1 | Data=0x660bd973 | Strobe=0x3 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=2985 | Addr=0x8 | Wr=1 | Data=0x660bd973 | Strobe=0x3 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=3015 | Addr=0x8 | Wr=1 | Data=0x551bfadd | Strobe=0x1 | Wake=1 | Rdata=0x1 | Err=0
+[DRIVER] Time=3015 | Addr=0x8 | Wr=1 | Data=0x551bfadd | Strobe=0x1 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] Success at Address 0x8
+[MONITOR] Time=3045 | Addr=0x4 | Wr=1 | Data=0xa47cc2ec | Strobe=0x0 | Wake=1 | Rdata=0x1 | Err=1
+[DRIVER] Time=3045 | Addr=0x4 | Wr=1 | Data=0xa47cc2ec | Strobe=0x0 | Wake=1 | Rdata=0xx | Err=x
+[SCOREBOARD] ERROR at Address 0x4
+==================================================
+ FINAL FUNCTIONAL COVERAGE: 100.00%
+==================================================
+==================================================
+   TEST OOPS ENVIRONMENT COMPLETED SUCCESSFULLY   
+==================================================
+Simulation complete via $finish(1) at time 5 US + 0
+../tb/tb_top.sv:78         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGDEFN: Default name "tb_top.env.cov.cg_apb" will be generated for covergroup instance "cg_apb" as the name of the covergroup instance is not specified explicitly: ../tb/apb5_uart_cov.sv, 6.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_top(tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_430a64da_623d2260.ucm
+  data               :  ./cov_work/scope/test/icc_430a64da_623d2260.ucd
+TOOL:	xrun(64)	20.09-s012: Exiting on Jul 15, 2026 at 22:25:51 IST  (total: 00:00:03)

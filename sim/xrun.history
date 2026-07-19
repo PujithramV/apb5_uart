@@ -1,0 +1,13 @@
+s1(14Jul2026:23:03:02):  xrun ../rtl/apb5_uart_bridge.sv -compile -v93 
+s2(14Jul2026:23:06:13):  xrun ../rtl/apb5_uart_bridge.sv -compile -sv 
+s3(14Jul2026:23:10:10):  xrun ../rtl/uart_tx.sv -compile -sv 
+s4(14Jul2026:23:17:54):  xrun ../rtl/uart_rx.sv -compile -sv 
+s5(15Jul2026:14:41:45):  xrun ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -compile -sv 
+s6(15Jul2026:15:24:11):  xrun ../tb/tb_top.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -sv +access+rwc -gui 
+s7(15Jul2026:16:23:32):  xrun ../tb/apb5_uart_if.sv ../tb/apb5_uart_trans.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -compile -sv 
+s8(15Jul2026:16:27:32):  xrun ../tb/apb5_uart_if.sv ../tb/apb5_uart_trans.sv ../tb/apb5_uart_gen.sv ../tb/apb5_uart_drv.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -compile -sv 
+s9(15Jul2026:16:33:41):  xrun ../tb/apb5_uart_if.sv ../tb/apb5_uart_trans.sv ../tb/apb5_uart_gen.sv ../tb/apb5_uart_drv.sv ../tb/apb5_uart_mon.sv ../tb/apb5_uart_scb.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -compile -sv 
+s10(15Jul2026:21:25:04):  xrun ../tb/apb5_uart_if.sv ../tb/tb_top.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -sv +access+rwc 
+s11(15Jul2026:21:34:17):  xrun ../tb/apb5_uart_if.sv ../tb/tb_top.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -sv +access+rwc 
+s12(15Jul2026:22:23:49):  xrun ../tb/apb5_uart_if.sv ../tb/apb5_uart_sva.sv ../tb/tb_top.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -sv +access+rwc -coverage all 
+s13(15Jul2026:22:25:48):  xrun ../tb/apb5_uart_if.sv ../tb/apb5_uart_sva.sv ../tb/tb_top.sv ../rtl/uart_tx.sv ../rtl/uart_rx.sv ../rtl/apb5_uart_bridge.sv -sv +access+rwc -coverage all 
